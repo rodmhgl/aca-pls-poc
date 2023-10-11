@@ -94,5 +94,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_aca_url"></a> [aca\_url](#output\_aca\_url) | The container app url. |
-| <a name="output_foreign_vm_public_ip"></a> [foreign\_vm\_public\_ip](#output\_foreign\_vm\_public\_ip) | The connection string to the VM that resides in the NON-PEERED vnet. |
-| <a name="output_local_vm_public_ip"></a> [local\_vm\_public\_ip](#output\_local\_vm\_public\_ip) | The connection string to the VM that resides in the SAME vnet as the Azure Container App. |
+| <a name="output_customer_windows_vm_public_ip"></a> [customer\_windows\_vm\_public\_ip](#output\_customer\_windows\_vm\_public\_ip) | The connection string to the Windows VM that resides in the SAME vnet as the Azure Container App. |
+| <a name="output_foreign_linux_vm_public_ip"></a> [foreign\_linux\_vm\_public\_ip](#output\_foreign\_linux\_vm\_public\_ip) | The connection string to the Linux VM that resides in the NON-PEERED vnet. |
+| <a name="output_local_linux_vm_public_ip"></a> [local\_linux\_vm\_public\_ip](#output\_local\_linux\_vm\_public\_ip) | The connection string to the Linux VM that resides in the SAME vnet as the Azure Container App. |
+| <a name="output_local_windows_vm_public_ip"></a> [local\_windows\_vm\_public\_ip](#output\_local\_windows\_vm\_public\_ip) | The connection string to the Windows VM that resides in the SAME vnet as the Azure Container App. |
