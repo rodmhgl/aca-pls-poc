@@ -84,17 +84,19 @@ No modules.
 | <a name="input_admin_username"></a> [admin\_username](#input\_admin\_username) | The username for the local admin account for the VMs. | `string` | `"azureuser"` | no |
 | <a name="input_app"></a> [app](#input\_app) | Name of the application that we are deploying. | `string` | `"myapp"` | no |
 | <a name="input_approved_subscription_ids"></a> [approved\_subscription\_ids](#input\_approved\_subscription\_ids) | A list of subscription IDs that are auto-approved for private endpoint creation. | `list(string)` | <pre>[<br>  "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"<br>]</pre> | no |
+| <a name="input_customer_network_address_space"></a> [customer\_network\_address\_space](#input\_customer\_network\_address\_space) | The address space that is used the virtual network. | `string` | `"172.16.0.0/16"` | no |
+| <a name="input_customer_subnet_address_prefix"></a> [customer\_subnet\_address\_prefix](#input\_customer\_subnet\_address\_prefix) | The address space that is used the aca subnet. | `string` | `"172.16.0.0/23"` | no |
 | <a name="input_env"></a> [env](#input\_env) | The environment that we are deploying to. | `string` | `"dev"` | no |
-| <a name="input_network_address_space"></a> [network\_address\_space](#input\_network\_address\_space) | The address space that is used the virtual network. | `string` | `"10.0.0.0/16"` | no |
+| <a name="input_local_network_address_space"></a> [local\_network\_address\_space](#input\_local\_network\_address\_space) | The address space that is used the virtual network. | `string` | `"10.0.0.0/16"` | no |
+| <a name="input_local_subnet_address_prefix"></a> [local\_subnet\_address\_prefix](#input\_local\_subnet\_address\_prefix) | The address space that is used the aca subnet. | `string` | `"10.0.0.0/23"` | no |
 | <a name="input_region"></a> [region](#input\_region) | Azure infrastructure region | `string` | `"eastus"` | no |
-| <a name="input_subnet_address_prefix"></a> [subnet\_address\_prefix](#input\_subnet\_address\_prefix) | The address space that is used the aca subnet. | `string` | `"10.0.0.0/23"` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_aca_url"></a> [aca\_url](#output\_aca\_url) | The container app url. |
-| <a name="output_customer_windows_vm_public_ip"></a> [customer\_windows\_vm\_public\_ip](#output\_customer\_windows\_vm\_public\_ip) | The connection string to the Windows VM that resides in the SAME vnet as the Azure Container App. |
-| <a name="output_foreign_linux_vm_public_ip"></a> [foreign\_linux\_vm\_public\_ip](#output\_foreign\_linux\_vm\_public\_ip) | The connection string to the Linux VM that resides in the NON-PEERED vnet. |
+| <a name="output_customer_linux_vm_public_ip"></a> [customer\_linux\_vm\_public\_ip](#output\_customer\_linux\_vm\_public\_ip) | The connection string to the Linux VM that resides in the NON-PEERED vnet. |
+| <a name="output_customer_windows_vm_public_ip"></a> [customer\_windows\_vm\_public\_ip](#output\_customer\_windows\_vm\_public\_ip) | The connection string to the Windows VM that resides in the NON-PEERED vnet. |
 | <a name="output_local_linux_vm_public_ip"></a> [local\_linux\_vm\_public\_ip](#output\_local\_linux\_vm\_public\_ip) | The connection string to the Linux VM that resides in the SAME vnet as the Azure Container App. |
 | <a name="output_local_windows_vm_public_ip"></a> [local\_windows\_vm\_public\_ip](#output\_local\_windows\_vm\_public\_ip) | The connection string to the Windows VM that resides in the SAME vnet as the Azure Container App. |
