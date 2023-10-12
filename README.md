@@ -14,7 +14,7 @@ We then create a Private Link Service (PLS) which points to the internal Azure L
 
 In the second VNET, we deploy a VM and a Private Endpoint (PE) pointing to the PLS. This allows us to test PE --> PLS connectivity across non-peered VNETs.
 
-Note that we also deployed associate Private DNS Zones and Private DNS Records into **both** VNETs. Without these records, DNS resolution would fail.
+Note that we also deployed associated Private DNS Zones and Private DNS Records into **both** VNETs. Without these records, DNS resolution would fail.
 
 ![architecture diagram](./assets/pls_aca.png "arch_diagram")
 
