@@ -18,7 +18,7 @@ Note that we also deployed associated Private DNS Zones and Private DNS Records 
 
 ![architecture diagram](./assets/pls_aca.png "arch_diagram")
 
-## Sample tfvars
+## Sample tfvars for multi-subscription
 
 ```hcl
 approved_subscription_ids = [
@@ -28,6 +28,16 @@ approved_subscription_ids = [
 admin_password            = "P@$$w0rd1234!"
 region                    = "eastus"
 customer_subscription_id  = "0718259d-5dac-4cf4-aeb7-cb5b6a9959bf"
+```
+
+## Sample tfvars for multi-subscription
+
+```hcl
+approved_subscription_ids = [
+  "0718259d-5dac-4cf4-aeb7-cb5b6a9959bf",
+]
+admin_password            = "P@$$w0rd1234!"
+region                    = "eastus"
 ```
 
 ## Requirements
