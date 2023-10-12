@@ -47,9 +47,9 @@ variable "local_subnet_address_prefix" {
 }
 
 variable "customer_subscription_id" {
-  type = string
+  type        = string
   description = "The subscription id to deploy the 'customer' resources into. Leave null to deploy into the 'local' subscription."
-  default = null
+  default     = null
 }
 
 variable "customer_network_address_space" {
