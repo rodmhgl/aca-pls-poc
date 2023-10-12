@@ -30,7 +30,7 @@ region                    = "eastus"
 customer_subscription_id  = "0718259d-5dac-4cf4-aeb7-cb5b6a9959bf"
 ```
 
-## Sample tfvars for multi-subscription
+## Sample tfvars for single-subscription
 
 ```hcl
 approved_subscription_ids = [
