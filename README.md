@@ -18,6 +18,18 @@ Note that we also deployed associate Private DNS Zones and Private DNS Records i
 
 ![architecture diagram](./assets/pls_aca.png "arch_diagram")
 
+## Sample tfvars
+
+```hcl
+approved_subscription_ids = [
+  "0bb2caa4-da8b-434a-96d4-d5e993f8c72d",
+  "0718259d-5dac-4cf4-aeb7-cb5b6a9959bf",
+]
+admin_password            = "P@$$w0rd1234!"
+region                    = "eastus"
+customer_subscription_id  = "0718259d-5dac-4cf4-aeb7-cb5b6a9959bf"
+```
+
 ## Requirements
 
 | Name | Version |
