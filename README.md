@@ -30,21 +30,12 @@ region                    = "eastus"
 customer_subscription_id  = "0718259d-5dac-4cf4-aeb7-cb5b6a9959bf"
 ```
 
-## Sample tfvars for single-subscription
-
-```hcl
-approved_subscription_ids = [
-  "0718259d-5dac-4cf4-aeb7-cb5b6a9959bf",
-]
-admin_password            = "P@$$w0rd1234!"
-region                    = "eastus"
-```
-
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.6.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.2.0, ~> 1.6.0 |
 | <a name="requirement_azapi"></a> [azapi](#requirement\_azapi) | 1.9.0 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.75.0 |
 
@@ -105,9 +96,10 @@ No modules.
 | <a name="input_admin_password"></a> [admin\_password](#input\_admin\_password) | The password for the local admin account for the VMs. | `string` | n/a | yes |
 | <a name="input_admin_username"></a> [admin\_username](#input\_admin\_username) | The username for the local admin account for the VMs. | `string` | `"azureuser"` | no |
 | <a name="input_app"></a> [app](#input\_app) | Name of the application that we are deploying. | `string` | `"myapp"` | no |
-| <a name="input_approved_subscription_ids"></a> [approved\_subscription\_ids](#input\_approved\_subscription\_ids) | A list of subscription IDs that are auto-approved for private endpoint creation. | `list(string)` | <pre>[<br>  "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"<br>]</pre> | no |
+| <a name="input_approved_subscription_ids"></a> [approved\_subscription\_ids](#input\_approved\_subscription\_ids) | A list of subscription IDs that are auto-approved for private endpoint creation. | `list(string)` | `[]` | no |
 | <a name="input_customer_network_address_space"></a> [customer\_network\_address\_space](#input\_customer\_network\_address\_space) | The address space that is used the virtual network. | `string` | `"172.16.0.0/16"` | no |
 | <a name="input_customer_subnet_address_prefix"></a> [customer\_subnet\_address\_prefix](#input\_customer\_subnet\_address\_prefix) | The address space that is used the aca subnet. | `string` | `"172.16.0.0/23"` | no |
+| <a name="input_customer_subscription_id"></a> [customer\_subscription\_id](#input\_customer\_subscription\_id) | The subscription id to deploy the 'customer' resources into. Leave null to deploy into the 'local' subscription. | `string` | `null` | no |
 | <a name="input_env"></a> [env](#input\_env) | The environment that we are deploying to. | `string` | `"dev"` | no |
 | <a name="input_local_network_address_space"></a> [local\_network\_address\_space](#input\_local\_network\_address\_space) | The address space that is used the virtual network. | `string` | `"10.0.0.0/16"` | no |
 | <a name="input_local_subnet_address_prefix"></a> [local\_subnet\_address\_prefix](#input\_local\_subnet\_address\_prefix) | The address space that is used the aca subnet. | `string` | `"10.0.0.0/23"` | no |
@@ -122,3 +114,4 @@ No modules.
 | <a name="output_customer_windows_vm_public_ip"></a> [customer\_windows\_vm\_public\_ip](#output\_customer\_windows\_vm\_public\_ip) | The connection string to the Windows VM that resides in the NON-PEERED vnet. |
 | <a name="output_local_linux_vm_public_ip"></a> [local\_linux\_vm\_public\_ip](#output\_local\_linux\_vm\_public\_ip) | The connection string to the Linux VM that resides in the SAME vnet as the Azure Container App. |
 | <a name="output_local_windows_vm_public_ip"></a> [local\_windows\_vm\_public\_ip](#output\_local\_windows\_vm\_public\_ip) | The connection string to the Windows VM that resides in the SAME vnet as the Azure Container App. |
+<!-- END_TF_DOCS -->
